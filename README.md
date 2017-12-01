@@ -72,22 +72,22 @@
 
 4. More information about how I went on about the project
 
-My final model results were:
-* training set accuracy of 0.963
-* validation set accuracy of 0.932
-* test set accuracy of 0.943
+        My final model results were:
+        * training set accuracy of 0.963
+        * validation set accuracy of 0.932
+        * test set accuracy of 0.943
 
-If an iterative approach was chosen:
-        * First I tried the LeNet architecture as I was familiar with it
-        * LeNet couldn’t go beyond an accuracy of 0.89, underfitting. My intuition is that it wasn’t deep enough and it couldn’t capture the patterns in one input diversely enough.
-        •	*I preserved the last three Fully connected layers because they didn’t seem much at fault. The problem of not being able to observe different patterns diversely was solved by introducing parallel layers in the front and then combining their outputs.
-        •	I also applied dropout of 0.9 individually to these parallel layers to prevent overfitting.
-        •	Dropout rate was initially 0.5 but the results kept improving up to a rate of 0.75.
-        •	After having two sets of parallel layers the output happened to be quite large which slowed down the computation. Hence I applied a MaxPooling layer to significantly reduce the data size. I didn’t use average pooling here because it felt like a lot of pixels in the 17x17 would be empty and averagePooling them would just make things worse as instead of leaving these empty pixels out we would be letting out output be affected by them. 
-        •	During researching I found that one shouldn’t apply Pooling and dropout on the same layer. I made sure that didn’t happen with my network.
-        •	I also experimented with using elu function instead of relu after reading several sources about its improved results. But elu didn’t perform as good as relu did for me.
-        •	Batch Size of 32 improved results considerably even though it slowed the computation
-        •	15 epochs seemed just right as beyond 15 the results didn’t improve considerably.
+        If an iterative approach was chosen:
+                * First I tried the LeNet architecture as I was familiar with it
+                * LeNet couldn’t go beyond an accuracy of 0.89, underfitting. My intuition is that it wasn’t deep enough and it couldn’t capture the patterns in one input diversely enough.
+                •	*I preserved the last three Fully connected layers because they didn’t seem much at fault. The problem of not being able to observe different patterns diversely was solved by introducing parallel layers in the front and then combining their outputs.
+                •	I also applied dropout of 0.9 individually to these parallel layers to prevent overfitting.
+                •	Dropout rate was initially 0.5 but the results kept improving up to a rate of 0.75.
+                •	After having two sets of parallel layers the output happened to be quite large which slowed down the computation. Hence I applied a MaxPooling layer to significantly reduce the data size. I didn’t use average pooling here because it felt like a lot of pixels in the 17x17 would be empty and averagePooling them would just make things worse as instead of leaving these empty pixels out we would be letting out output be affected by them. 
+                •	During researching I found that one shouldn’t apply Pooling and dropout on the same layer. I made sure that didn’t happen with my network.
+                •	I also experimented with using elu function instead of relu after reading several sources about its improved results. But elu didn’t perform as good as relu did for me.
+                •	Batch Size of 32 improved results considerably even though it slowed the computation
+                •	15 epochs seemed just right as beyond 15 the results didn’t improve considerably.
 
         I chose an architecture with big layers in its beginning because I wanted to capture as many different patterns as possible.
 
