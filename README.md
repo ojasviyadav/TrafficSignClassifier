@@ -2,19 +2,19 @@
 • Built and trained a deep neural network to classify German traffic signs • Used TensorFlow to build the neural net. Used Normalization and MaxPooling to guard against overfitting • 95% testing accuracy
 
 1. About the Data set
-        I used the standard python functions and NumPy library to calculate summary statistics of the traffic signs data set:
-        Number of training examples = 34799
-        Number of testing examples = 12630
-        Number of validation examples = 4410
-        Image data shape = (34799, 32, 32, 3)
-        Number of classes = 43
-   The DataSet is also visualized in the .ipynb file
-   
+                I used the standard python functions and NumPy library to calculate summary statistics of the traffic signs data set:
+                Number of training examples = 34799
+                Number of testing examples = 12630
+                Number of validation examples = 4410
+                Image data shape = (34799, 32, 32, 3)
+                Number of classes = 43
+           The DataSet is also visualized in the .ipynb file
+
 2. Pre-processing : 
-        1.Cropped the image from 32x32 to 30x30 as most of the pictures had extra space on the edges. This increased the processing speed and removed areas which could confuse the network.
-        2.Normalised the data by : Dividing all the pixels by 255
-        Subtracting the result by 0.5. This made sure the mean of all the data was zero and the unit standard deviation.
-        3.I also experimented with rotation however the accuracy always happened to be lesser than when not rotation wasn’t employed. 
+                1.Cropped the image from 32x32 to 30x30 as most of the pictures had extra space on the edges. This increased the processing speed and removed areas which could confuse the network.
+                2.Normalised the data by : Dividing all the pixels by 255
+                Subtracting the result by 0.5. This made sure the mean of all the data was zero and the unit standard deviation.
+                3.I also experimented with rotation however the accuracy always happened to be lesser than when not rotation wasn’t employed. 
 
 3. Model Architecture : 
 
